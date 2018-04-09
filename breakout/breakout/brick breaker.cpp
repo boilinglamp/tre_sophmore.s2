@@ -205,7 +205,7 @@ return 0;
 }
 
 void brick::initbrick(int x, int y, int x1, int y1, int r, int g, int b) {
-	void brick::drawbrick(al_draw_filled_rectangle(x, y, x1, y1, al_map_rgb(r, g, b));
+	void brick::drawbrick(al_draw_filled_rectangle(xpos, ypos, xpos + 20, ypos +20, al_map_rgb(r, g, b));
 }
 
 
