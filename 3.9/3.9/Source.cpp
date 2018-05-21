@@ -17,7 +17,7 @@ int main() {
 	al_init_image_addon();
 
 	display = al_create_display(900, 750);
-	ALLEGRO_BITMAP *cute_potato = al_load_bitmap("cutepota.jpg");
+	ALLEGRO_BITMAP *cute_potato = al_load_bitmap("vegitable.jpg");
 
 	al_clear_to_color(al_map_rgb(255, 255, 255));
 	Potato p1;
@@ -26,6 +26,7 @@ int main() {
 	p1.initPotato(200, 400);
 	p2.initPotato(600, 100);
 	while (1) {
+		al_rest(.5);
 		p1.drawPotato(cute_potato);
 		p2.drawPotato(cute_potato);
 
@@ -43,5 +44,5 @@ void Potato::initPotato(int x, int y) {
 
 }
 void Potato::drawPotato(ALLEGRO_BITMAP *image) {
-	al_draw_bitmap(image, rand() % 800, rand() % 800, 0);
+	al_draw_bitmap(image, rand() % 900, rand() % 750, 0);
 }
